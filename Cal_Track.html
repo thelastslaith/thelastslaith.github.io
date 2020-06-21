@@ -1,0 +1,152 @@
+<link rel = "stylesheet"
+type = "text/css"
+href = "css" />
+
+<!-- Navbar -->
+<html>
+<head>
+<div class="header">
+  <a href="index.html" class="logo"><img src="logo.jpg" style="max-width: 200px;"></a>
+  <div class="header-right">
+    <a href="index.html">Home</a>
+    <a href="NumberGuesser.HTML">Number Guesser</a>
+    <a href="About.html">About</a>
+    <a href="Pay.html">Pay</a>
+    <a href="Advert.html">Advert</a>
+    <a href="Book.html">Book</a>
+    <a href="LoadFile.html">Load File</a>
+    <a href="Get requests.html">Get Requests</a>
+    <a href="Library.html">Library</a>
+    <a href="Weather.html">Weather</a>
+    <a href="Items_List.html">Items</a>
+    <a class="active" href="Cal_Track.html">Calorie Tracker</a>
+    <a href="Cal_Chart.html">Calorie Chart</a>
+  </div>
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Track Calorie</title>
+</head>
+
+<body>
+  <!-- Nav Bar-->
+  <nav>
+    <div class="nav-wrapper blue">
+      <div class="container">
+        <a href="#" class="brand-logo" center">Tracalorie</a>
+        <ul class="right">
+          <li><a href="#" class="clear-btn btn blue lighen-3">Clear All</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+  </nav>
+  <br>
+  <div class="container">
+    <!-- Form Card-->
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title"> Update Activity</span>
+        <form class="col">
+          <div class="row">
+            <div class="input-field col s6">
+              <input list="activity" placeholder="Pick Activity" id="activity-name">
+                <!---picklist placeholder
+              <datalist id="activity">
+                <option value="Gain1">
+                <option value="Burn2">
+              </datalist>
+              -->
+              <lable for="#activity-name">Activity</lable>
+            </div>
+            <div class="input-field col s6">
+              <input type="date" id="activity-date">
+              <lable for="activity-date">Date</lable>
+            </div>
+
+          </div>
+          <button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i> Add Activity</button>
+          <button class="update-btn btn orange darken-3"><i class="fa fa-pencil-square-o"></i> Update Activity</button>
+          <button class="delete-btn btn red"><i class="fa fa-remove"></i> Delete Activity</button>
+          <button class="back-btn btn grey pull-right"><i class="fa fa-chevron-circile-left"></i> Back</button>        
+        </form>
+        <ul class="right">
+          <li><a href="#" class="Time-All-btn btn blue-3" style="background:green">All Time</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="#" class="Time-28-btn btn blue-3">28 Days</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="#" class="Time-7-btn btn blue-3">7 days</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="#" class="Time-1-btn btn blue-3">Today</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--- Calorie Count
+    <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
+    -->
+    <!-- Totals Header -->
+    <table id="#total-table">
+      <tr>
+        <th>Gain</th>
+        <th>Burn</th>
+        <th>Total</th>
+      </tr>
+      </table>
+    <!-- Item List-->
+    <ul id="activity-list" class="collection">
+      <table id="#activity-table">
+        <tr>
+          <th>Activity</th>
+          <th>Date</th>
+          <th>Calories</th>
+        </tr>
+        </table>
+
+      <!-- example list
+      <li class="collection-item" id="item-0">
+        <strong>Steak Dinner: </strong> <em>1200 Calories</em>
+        <a href="#" class="secondary-content">
+          <i class="edit-item fa fa-pencil"></i>
+        </a>
+      </li>
+      <li class="collection-item" id="item-0">
+        <strong>Cookie: </strong> <em>400 Calories</em>
+        <a href="#" class="secondary-content">
+          <i class="edit-item fa fa-pencil"></i>
+        </a>
+      </li>
+      <li class="collection-item" id="item-0">
+        <strong>Egg: </strong> <em>300 Calories</em>
+        <a href="#" class="secondary-content">
+          <i class="edit-item fa fa-pencil"></i>
+        </a>
+      </li>
+      -->
+    </ul>
+  
+  </div>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="Cal_Track.js"></script>
+
+</body>
+</html>
